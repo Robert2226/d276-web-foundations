@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>D276 – Ops Web Foundations</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <h1>D276 – Ops Web Foundations</h1>
+  </header>
+
+  <nav aria-label="Primary">
+    <ul>
+      <li><a href="#">Runbooks</a></li>
+      <li><a href="#">Capacity</a></li>
+      <li><a href="#">Incidents</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <article>
+      <h2>VLAN Lab Recap</h2>
+      <p>
+        Inside an OCI VM (Oracle Linux 9.6), I built a Linux bridge (br0) with VLAN filtering and two namespaces (ns-host, ns-gateway),
+        connected via veth pairs. VLAN 10 tagging ensured pings only worked when ports matched the VLAN.
+      </p>
+      <p>
+        This exercise clarified how segmentation, tagging, and isolation map to real DC operations.
+      </p>
+    </article>
+
+    <aside aria-labelledby="constants-title">
+      <h2 id="constants-title">Quick Constants & Formulae</h2>
+      <ul>
+        <li>kW = kVA × PF</li>
+        <li>Safe load ≈ 80–90% of breaker rating</li>
+        <li>ΔT × GPM × 500 = BTU/hr (water systems)</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 Robert Walias — <a href="https://github.com/Robert2226">GitHub</a></p>
+  </footer>
+</body>
+</html>
