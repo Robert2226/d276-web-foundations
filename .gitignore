@@ -1,0 +1,15 @@
+# macOS cruft
+.DS_Store
+
+# Node / build files
+node_modules/
+dist/
+.cache/
+.tmp/
+
+# Editors
+.vscode/
+.idea/
+
+# Logs
+*.log
