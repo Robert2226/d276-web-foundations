@@ -49,3 +49,30 @@ main {
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
+/* M1: Runbook layout & capacity table */
+#runbooks {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.capacity-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.capacity-table th,
+.capacity-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.util-bar {
+  background: linear-gradient(
+    to right,
+    currentColor var(--util-percent),
+    #eee 0
+  );
+  padding: 0.25rem 0.5rem;
+  font-weight: bold;
+}
