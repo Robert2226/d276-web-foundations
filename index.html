@@ -56,6 +56,47 @@
 
   <div class="capacity-section">
     <h2>Capacity Table</h2>
+    <!-- M2: Filter controls (UI only; behavior added in Step 3) -->
+<form id="filters" class="filters" aria-describedby="filters-help">
+  <fieldset>
+    <legend>Filter capacity table</legend>
+
+    <div class="filter-row">
+      <label for="filter-circuit">Circuit contains</label>
+      <input
+        id="filter-circuit"
+        name="filter-circuit"
+        type="text"
+        inputmode="search"
+        placeholder="e.g., PDU-A-3B or BB-12"
+        autocomplete="off"
+      />
+    </div>
+
+    <div class="filter-row">
+      <label for="filter-util">Utilization ≥</label>
+      <input
+        id="filter-util"
+        name="filter-util"
+        type="range"
+        min="0"
+        max="100"
+        step="5"
+        value="0"
+        aria-describedby="util-output"
+      />
+      <output id="util-output" for="filter-util">0%</output>
+    </div>
+
+    <div class="filter-actions">
+      <button type="button" id="filter-clear">Clear filters</button>
+      <p id="filters-help" class="help">
+        Filters hide non-matching rows; nothing is removed from the page.
+      </p>
+      <p id="results-live" class="sr-live" aria-live="polite"></p>
+    </div>
+  </fieldset>
+</form>
     <table class="capacity-table">
       <thead>
         <tr>
@@ -91,5 +132,6 @@
   <footer>
     <p>© 2025 Robert Walias — <a href="https://github.com/Robert2226">GitHub</a></p>
   </footer>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
